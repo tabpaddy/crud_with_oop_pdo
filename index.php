@@ -21,6 +21,47 @@
         <form id="add-user-form" class="p-2" novalidate>
             <div class="row mb-3">
                 <div class="col">
+                    <input type="text" name="fname"  class="form-control form-control-lg" placeholder="Enter First Name" required>
+                    <div class="invalid-feedback">First name is required!</div>
+                </div>
+                <div class="col">
+                    <input type="text" name="lname"  class="form-control form-control-lg" placeholder="Enter Last Name" required>
+                    <div class="invalid-feedback">Last name is required!</div>
+                </div>
+                <div class="my-3">
+                    <input type="email" name="email"  class="form-control form-control-lg" placeholder="Enter E-mail" required>
+                    <div class="invalid-feedback">E-mail is required!</div>
+                </div>
+                <div class="mb-3">
+                    <input type="tel" name="phone"  class="form-control form-control-lg" placeholder="Enter Phone Number" required>
+                    <div class="invalid-feedback">Phone number is required!</div>
+                </div>
+                <div class="mb-3">
+                    <input type="submit" value="Add User" class="btn btn-primary btn-block btn-lg form-control" id="add-user-btn">
+                </div>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- Add new user modal end -->
+
+    <!-- Edit user modal start -->
+
+<!-- Modal -->
+<div class="modal fade" id="editUserModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Edit This User</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="edit-user-form" class="p-2" novalidate>
+            <input type="hidden" name="id" id="id">
+            <div class="row mb-3">
+                <div class="col">
                     <input type="text" name="fname" id="fname" class="form-control form-control-lg" placeholder="Enter First Name" required>
                     <div class="invalid-feedback">First name is required!</div>
                 </div>
@@ -37,7 +78,7 @@
                     <div class="invalid-feedback">Phone number is required!</div>
                 </div>
                 <div class="mb-3">
-                    <input type="submit" value="Add User" class="btn btn-primary btn-block btn-lg form-control" id="add-user-btn">
+                    <input type="submit" value="Update User" class="btn btn-success btn-block btn-lg form-control" id="edit-user-btn">
                 </div>
             </div>
         </form>
@@ -45,7 +86,8 @@
     </div>
   </div>
 </div>
-    <!-- Add new user modal end -->
+    <!-- Edit user modal end -->
+
     <div class="container">
         <div class="row mt-2">
             <div class="col-lg-12 d-flex justify-content-between align-items-center my-3">
@@ -80,17 +122,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>praise</td>
-                                <td>tab</td>
-                                <td>tab@gmail.com</td>
-                                <td>0906660789</td>
-                                <td>
-                                    <a href="" class="btn btn-success btn-sm rounded-pill py-0">Edit</a>
-                                    <a href="" class="btn btn-danger btn-sm rounded-pill py-0">Delete</a>
-                                </td>
-                            </tr>
+                            
                         </tbody>
                     </table>
                 </div>
